@@ -1,0 +1,30 @@
+---
+title: "plotly"
+author: "Shirley Liang"
+date: "2022-10-25"
+output: html_document:
+  toc: true
+  toc_float: true
+---
+
+```{r}
+
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+```
+
+```{r}
+
+data("nyc_airbnb")
+
+nyc_airbnb <- nyc_airbnb %>% mutate(rating = review_scores_location / 2) %>% 
+  select(neighbourhood_group, neighbourhood, price, room_type, lat, long, rating) %>% 
+  filter(
+    neighbourhood_group == "Manhattan",
+    price %in% 100:500
+  ) %>% drop_na(rating)
+
+```
+
