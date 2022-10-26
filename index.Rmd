@@ -4,12 +4,47 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
+    theme: yeti
 ---
+####
+####
+####
+### INTRODUCTION
+####
+#### Thank you for visitng my personal page! 
+#### On this website, you can find my peronal information and connect with me via github account, email, and LinkedIn. My academic and professional experience is also listed in a seprate page.
 
-#### This is my website
+####
 
+#### Connect with me here or using the icon on the upper right corner:
 
-#### Academic and Professional Experience
+##### - [GitHub](https://github.com/Shirley-zl3118)
 
-[Academic and Professional Experience](academic.html)
+##### - [LinkedIn](https://www.linkedin.com/in/zipei-“shirley”-liang-pharmd-rph-819616a7/)
+
+##### - Email: zl3118@cumc.columbia.edu
+
+#### 
+####
+### ACADEMIA
+####
+####
+#### Please click on [Academic and Professional Experience](academic.html) or the icon on the upper right corner if you could like to access my resume. 
+
+#### 
+####
+### HOBBY
+####
+
+<img src="images/cat.jpg" style="width:50%">
+
+####
+#### I love watching cat video during free time. [Click here](https://www.youtube.com/watch?v=XyNlqQId-nk) to watch some Youtube cat videos with me!
+
+#### 
+####
+#### 
+####
+### EXAMPLE GRAPHS
+####
+#### Here are some example plots I have made for data science class, showing on the [Dashboard](dashboard.html). Pleasae take a look if you are interested in data/results about weather stations! 

@@ -1,13 +1,13 @@
 ---
 title: "plotly"
-author: "Shirley Liang"
-date: "2022-10-25"
-output: html_document:
-  toc: true
-  toc_float: true
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: sandstone
 ---
 
-```{r}
+```{r, include=FALSE}
 
 library(tidyverse)
 library(p8105.datasets)
@@ -17,14 +17,42 @@ library(plotly)
 
 ```{r}
 
-data("nyc_airbnb")
+data("ny_noaa")
 
-nyc_airbnb <- nyc_airbnb %>% mutate(rating = review_scores_location / 2) %>% 
-  select(neighbourhood_group, neighbourhood, price, room_type, lat, long, rating) %>% 
-  filter(
-    neighbourhood_group == "Manhattan",
-    price %in% 100:500
-  ) %>% drop_na(rating)
+noaa <- ny_noaa %>% 
+  mutate(tmax = as.numeric(tmax), tmin = as.numeric(tmin)) %>% 
+  select(date, prcp, snow, snwd, tmax, tmin, id) %>% 
+  mutate(range = tmax - tmin)
 
 ```
+
+```{r}
+
+noaa %>% 
+  filter(snwd > 0 & snwd < 2000) %>% 
+  filter(snow < 1100) %>% 
+  plot_ly(x = ~snow, y = ~snwd, type = "scatter", mode = "markers", color = ~tmax, alpha = 0.5) %>% 
+  layout(title = 'Snowfall vs. snow depth on maximum temperature', xaxis = list(title = 'Snowfall (mm)'), yaxis = list(title = 'Snow depth (mm)'))
+
+```
+
+```{r}
+
+noaa %>% 
+  count(id) %>% 
+  mutate(id = fct_reorder(id, n)) %>% 
+  plot_ly(x = ~id, y = ~n, color = ~id, type = "bar", colors = "viridis") %>% 
+  layout(title = 'Number of weather reports by station ID', xaxis = list(title = 'Weather station ID'))
+
+```
+
+```{r}
+
+noaa %>% plot_ly(type = 'scatter', mode = 'lines') %>%
+  add_trace(x = ~date, y = ~prcp, name = 'Precipitation') %>%
+  layout(showlegend = F) %>% 
+  layout(title = 'Precipitation over time', xaxis = list(title = 'Date of observation'), yaxis = list(title = 'Precipitation (tenths of mm)'))
+
+```
+
 

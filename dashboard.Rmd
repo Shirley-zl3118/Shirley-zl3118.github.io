@@ -13,6 +13,19 @@ library(p8105.datasets)
 library(plotly)
 ```
 
+
+```{r}
+
+data("ny_noaa")
+
+noaa <- ny_noaa %>% 
+  mutate(tmax = as.numeric(tmax), tmin = as.numeric(tmin)) %>% 
+  select(date, prcp, snow, snwd, tmax, tmin, id) %>% 
+  mutate(range = tmax - tmin)
+
+```
+
+
 Column {data-width=650}
 -----------------------------------------------------------------------
 
@@ -20,7 +33,11 @@ Column {data-width=650}
 
 ```{r}
 
-
+noaa %>% 
+  filter(snwd > 0 & snwd < 2000) %>% 
+  filter(snow < 1100) %>% 
+  plot_ly(x = ~snow, y = ~snwd, type = "scatter", mode = "markers", color = ~tmax, alpha = 0.5) %>% 
+  layout(title = 'Snowfall vs. snow depth on maximum temperature', xaxis = list(title = 'Snowfall (mm)'), yaxis = list(title = 'Snow depth (mm)'))
 
 ```
 
@@ -31,11 +48,22 @@ Column {data-width=350}
 
 ```{r}
 
+noaa %>% 
+  count(id) %>% 
+  mutate(id = fct_reorder(id, n)) %>% 
+  plot_ly(x = ~id, y = ~n, color = ~id, type = "bar", colors = "viridis") %>% 
+  layout(title = 'Number of weather reports by station ID', xaxis = list(title = 'Weather station ID'))
+
 ```
 
 ### Chart C
 
 ```{r}
+
+noaa %>% plot_ly(type = 'scatter', mode = 'lines') %>%
+  add_trace(x = ~date, y = ~prcp, name = 'Precipitation') %>%
+  layout(showlegend = F) %>% 
+  layout(title = 'Precipitation over time', xaxis = list(title = 'Date of observation'), yaxis = list(title = 'Precipitation (tenths of mm)'))
 
 ```
 

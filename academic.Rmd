@@ -4,6 +4,56 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
+    theme: sandstone
 ---
+#### 
+### EDUCATION
+#### 
+#### Master of Science in Epidemiology
+##### Columbia University, Mailman School of Public Health, New York, NY
+##### Anticipated 05/2023
+#### 
+#### Doctor of Pharmacy
+##### Northeastern University, Bouvé College of Health Sciences, School of Pharmacy, Boston, MA
+##### 05/2020
+#### 
+#### Bachelor of Science in Pharmacy Studies, Minor in Biology
+##### Northeastern University, Bouvé College of Health Sciences, School of Pharmacy, Boston, MA
+##### 05/2019
+#### 
+#### 
+#### 
+### RESEARCH & WORK
+#### 
+#### EPID8450 Clinical Epidemiology Teaching Assistant
+##### Mailman School of Public Health,Columbia University, New York, NY
+##### 09/2022 – 12/2022
+##### o Developed discussion materials and lead the one hour in class group discussion session each week
+##### o Hosted office hours to answer questions regarding lecture materials and assignments
+##### o Graded weekly assignments and developed answer keys for updated questions
+#### 
+#### 
+#### Volunteer Pharmacist/Medication Analyst
+##### Catholic Medical Mission Board, New York, NY
+##### 05/2022 – present
+##### o Analyzed medication donation acceptance using R programming language based on previous partners’ response
+##### o Reviewed monthly pharmaceutical donation lists and assisted in acceptance decisions based on clinical judgments
+##### o Revised Medical Donation Program Pharmacy Operations Guide and Medication Prescribing Guide
+#### 
+#### 
+#### Individual Student Researcher
+##### Center for Injury Epidemiology and Prevention, Columbia University, New York, NY
+##### 01/2022 – present
+##### o Examined pharmacoepidemiology relationship between psychoactive drugs and driving safety in elderly
+##### o Conducted data analyses of cohort study LongROAD dataset using SAS programming language
+##### o Compiled manuscript and literature review utilizing PubMed, Google Scholar, and EmBase
+#### 
+#### 
+#### 
+### SERVICE ACTIVITIES
+#### 
+#### NICU Navigator Project Lead
+##### Morgan Stanley Children’s Hospital & Columbia University, New York, NY
+##### 01/2022 – present
+
 
