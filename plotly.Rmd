@@ -15,7 +15,7 @@ library(plotly)
 
 ```
 
-```{r}
+```{r import}
 
 data("ny_noaa")
 
