@@ -1,5 +1,5 @@
 ---
-title: "dashboard"
+title: "dashboard" 
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -14,7 +14,7 @@ library(plotly)
 ```
 
 
-```{r}
+```{r dataset}
 
 data("ny_noaa")
 
